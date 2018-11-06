@@ -16,7 +16,7 @@
             <ul class="nav navbar-nav">
                 <li><a href="#menu-toggle" class="btn btn-" id="menu-toggle"><i class="fa fa-bars" style="font-size:1.5em;"></i></a></li>
                 <li><a href="#" class="active">HOME</a></li>
-                <li><a href="#">Add Category</a></li>
+                <li><a href="{{ route('list-assets') }}">All Assets</a></li>
                 <li><a href="#">Add Product</a></li>
                 <li><a href="#">Add Items</a></li>
             </ul>

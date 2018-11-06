@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     @include('admin.layout.main_partials.header')
-</html>
 <body>
     @include('admin.layout.main_partials.nav')
     <div id="wrapper">
@@ -24,3 +23,5 @@
         });
     });
 </script>
+@yield('additional-scripts')
+</html>
