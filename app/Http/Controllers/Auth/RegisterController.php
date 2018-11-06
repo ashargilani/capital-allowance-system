@@ -72,16 +72,17 @@ class RegisterController extends Controller
     /**
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function showRegistrationForm()
+/*    public function showRegistrationForm()
     {
         return redirect('login');
     }
 
     /**
      *
-     */
+     
     public function register()
     {
 
     }
+*/
 }
