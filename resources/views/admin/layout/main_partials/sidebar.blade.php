@@ -2,7 +2,7 @@
     <ul class="sidebar-nav">
         <li>
             <br />
-            <img class="img-responsive" src="{{ asset('images/capital-allowance.png') }}" width="70%" />
+            <img class="img-responsive" src="{{ asset('images/capital-allowance.png') }}" width="40%" />
             <br />
         </li>
         <li>

@@ -28,7 +28,7 @@ class AssetController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.asset.add_asset');
     }
 
     /**
@@ -37,9 +37,15 @@ class AssetController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, AssetService $assetService)
     {
-        //
+        if (Asset::create([
+            'name' => $request->input('name'),
+            'description' => $request->input('description')
+        ])) {
+            return redirect('list-assets');
+        }
+
     }
 
     /**
