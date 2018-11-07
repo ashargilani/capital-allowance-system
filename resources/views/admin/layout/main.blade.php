@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     @include('admin.layout.main_partials.header')
-</html>
 <body>
     @include('admin.layout.main_partials.nav')
     <div id="wrapper">
@@ -16,6 +15,8 @@
         <!-- End Page Content Wrapper-->
     </div>
 </body>
+<script src="{{ asset('js/jquery.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <script>
     $(document).ready(function () {
         $("#menu-toggle").click(function(e) {
@@ -24,3 +25,5 @@
         });
     });
 </script>
+@yield('additional-scripts')
+</html>

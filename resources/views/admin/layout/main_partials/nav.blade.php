@@ -15,19 +15,15 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="#menu-toggle" class="btn btn-" id="menu-toggle"><i class="fa fa-bars" style="font-size:1.5em;"></i></a></li>
-                <li><a href="#" class="active">HOME</a></li>
-                <li><a href="#">Add Category</a></li>
-                <li><a href="#">Add Product</a></li>
-                <li><a href="#">Add Items</a></li>
+                <li><a href="{{ route('home') }}" class="active fa fa-home fa-2x"></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle fa fa-user fa-2x" aria-hidden="true" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        {{ Auth::user()->name }}
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">{{ Auth::user()->name }}</a></li>
                         <li><a href="#">Update Profile</a></li>
                         <li><a href="#">Help Center</a></li>
                         <li role="separator" class="divider"></li>

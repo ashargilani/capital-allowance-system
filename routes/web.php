@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/list-assets', 'AssetController@index')->name('list-assets');
+Route::get('/add-asset', 'AssetController@create')->name('add-asset');
+Route::post('/save-asset', 'AssetController@store')->name('save-asset');
