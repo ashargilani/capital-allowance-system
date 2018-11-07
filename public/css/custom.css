@@ -7,6 +7,16 @@ body{
     margin-top: 56px;
 }
 
+.container-background-linear{
+    background: #0250c5;
+    background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+    background: -o-linear-gradient(bottom, #0250c5, #d43f8d);
+    background: -moz-linear-gradient(bottom, #0250c5, #d43f8d);
+    background: linear-gradient(bottom, #0250c5, #d43f8d);
+    position: relative;
+    z-index: 1;
+}
+
 #wrapper {
     margin-top: -20px;
 }
@@ -59,7 +69,7 @@ div.row h3{
 
 .img-responsive {
     margin: 0 auto;
-    padding: 15px;
+    padding: 4px;
 }
 
 .sidebar-style{

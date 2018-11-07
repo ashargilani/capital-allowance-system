@@ -7,7 +7,17 @@
 body, html {
     height: 100%;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgb(241, 243, 246), rgb(154, 155, 155));
+    background-image: url('../images/img-01.png');
+}
+
+.container-background-linear{
+    background: #0250c5;
+    background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+    background: -o-linear-gradient(bottom, #0250c5, #d43f8d);
+    background: -moz-linear-gradient(bottom, #0250c5, #d43f8d);
+    background: linear-gradient(bottom, #0250c5, #d43f8d);
+    position: relative;
+    z-index: 1;
 }
 
 .card-container.card {

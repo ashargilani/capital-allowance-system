@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/structure.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 </head>
-<body>
+<body class="container-background-linear">
     <div class="container">
         <div class="card card-container">
             <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />

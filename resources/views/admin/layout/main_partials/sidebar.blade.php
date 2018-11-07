@@ -2,11 +2,14 @@
     <ul class="sidebar-nav">
         <li>
             <br />
-            <img class="img-responsive" src="{{ asset('images/capital-allowance.png') }}" width="90%" />
+            <img class="img-responsive" src="{{ asset('images/capital-allowance.png') }}" width="70%" />
             <br />
         </li>
         <li>
             <a href="#"><i class="fa fa-dashboard sidebar-style"></i> &nbsp; Dashboard</a>
+        </li>
+        <li>
+            <a href="{{ route('list-assets') }}"><i class="fa fa-plus-square-o sidebar-style"></i> &nbsp; All Assets </a>
         </li>
         <li>
             <a href="#"><i class="fa fa-money sidebar-style"></i> &nbsp; Depreciation report </a>
@@ -24,10 +27,10 @@
             <a href="#"><i class="fa  fa-money sidebar-style"></i>  &nbsp; Maximum tax report</a>
         </li>
         <li>
-            <a href="#"><i class="fa  fa-list sidebar-style"></i>  &nbsp; All Reports report</a>
+            <a href="#"><i class="fa  fa-list sidebar-style"></i>  &nbsp; All reports</a>
         </li>
         <li>
-            <a href="#"><span class="glyphicon glyphicon-user sidebar-style" ></span> &nbsp; My Account</a>
+            <a href="#"><span class="fa fa-user sidebar-style" ></span> &nbsp; My Account</a>
         </li>
         <li>
             <a href="{{ route('logout') }}"
