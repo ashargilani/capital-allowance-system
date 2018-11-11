@@ -45,7 +45,6 @@ class AssetController extends Controller
         ])) {
             return redirect('list-assets');
         }
-
     }
 
     /**

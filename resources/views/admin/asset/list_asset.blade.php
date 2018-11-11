@@ -39,9 +39,9 @@
                             @foreach($assets as $asset)
                             <tr>
                                 <td>{{ $loop->index }}</td>
-                                <td>{{ $asset->name }}></td>
+                                <td>{{ $asset->name }}</td>
                                 <td>{{ $asset->description }}</td>
-                                <td>{{ $asset->created_at }}></td>
+                                <td>{{ $asset->created_at }}</td>
                                 <td>
                                     <button class="btn-info" data-id="" data-title="" data-description="" data-toggle="modal" data-target="#myModal">&nbsp;Edit&nbsp;</button>
                                 </td>

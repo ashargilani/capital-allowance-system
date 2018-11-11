@@ -9,6 +9,9 @@
             <a href="#"><i class="fa fa-dashboard sidebar-style"></i> &nbsp; Dashboard</a>
         </li>
         <li>
+            <a href="{{ route('list-assets-group') }}"><i class="fa fa-object-group sidebar-style"></i> &nbsp; Asset Groups</a>
+        </li>
+        <li>
             <a href="{{ route('list-assets') }}"><i class="fa fa-plus-square-o sidebar-style"></i> &nbsp; All Assets </a>
         </li>
         <li>
