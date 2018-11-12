@@ -51,20 +51,6 @@ class CategoryService
 
     /**
      * @param Request $request
-     * @return bool
-     */
-    public function saveNewAsset(Request $request)
-    {
-        $asset = new Category();
-        $asset->name = $request->input['name'];
-        $asset->description = $request->input['description'];
-        $asset->save();
-
-        return true;
-    }
-
-    /**
-     * @param Request $request
      * @param Category $category
      */
     public function updateAssetGroup(Request $request, Category $category)
