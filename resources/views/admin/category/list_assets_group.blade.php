@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="col-xs-12 col-sm-12">
                 @include('admin.layout.partials.message')
                 <div id="dataTableContainer" class="data-table-container table-responcive">
                     <table id="table_id" class="table table-striped">
