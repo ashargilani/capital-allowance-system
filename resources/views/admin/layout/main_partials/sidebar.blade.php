@@ -12,7 +12,7 @@
             <a href="{{ route('list-assets-group') }}"><i class="fa fa-object-group sidebar-style"></i> &nbsp; Asset Groups</a>
         </li>
         <li>
-            <a href="{{ route('list-assets') }}"><i class="fa fa-plus-square-o sidebar-style"></i> &nbsp; All Assets </a>
+            <a href="{{ route('list-assets') }}"><i class="fa fa-object-ungroup sidebar-style"></i> &nbsp; Assets </a>
         </li>
         <li>
             <a href="#"><i class="fa fa-money sidebar-style"></i> &nbsp; Depreciation report </a>

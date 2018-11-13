@@ -21,16 +21,24 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <div class="col-xs-12 col-sm-12">
+                @include('admin.layout.partials.message')
                 <div id="dataTableContainer" class="data-table-container table-responcive">
                     <table id="table_id" class="table table-striped">
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Asset Title</th>
+                            <th>Name</th>
+                            <th>Month/Year of purchase</th>
+                            <th>Quantity</th>
                             <th>Description</th>
+                            <th>Purchase Cost</th>
+                            <th>Annual Depreceation</th>
+                            <th>I.A</th>
+                            <th>A.A</th>
+                            <th>Investment Allowance</th>
                             <th>Added On</th>
-                            <th>Modify</th>
+                            <th>Edit</th>
                             <th>Delete</th>
                         </tr>
                         </thead>
@@ -38,22 +46,31 @@
                         @if( $assets->count() > 0)
                             @foreach($assets as $asset)
                             <tr>
-                                <td>{{ $loop->index }}</td>
+                                <td>{{ $loop->index + 1 }}</td>
                                 <td>{{ $asset->name }}</td>
+                                <td>{{ $asset->month_year_of_purchase }}</td>
+                                <td>{{ $asset->no_of_assets_purchased }}</td>
                                 <td>{{ $asset->description }}</td>
+                                <td>{{ $asset->purchase_cost }}</td>
+                                <td>{{ $asset->annual_depreceation }}</td>
+                                <td>{{ $asset->initial_allowance }}</td>
+                                <td>{{ $asset->annual_allowance }}</td>
+                                <td>{{ $asset->investment_allowance }}</td>
                                 <td>{{ $asset->created_at }}</td>
                                 <td>
-                                    <button class="btn-info" data-id="" data-title="" data-description="" data-toggle="modal" data-target="#myModal">&nbsp;Edit&nbsp;</button>
+                                    <button class="btn-info">Edit</button>
                                 </td>
                                 <td>
-                                    <button class="btn-danger delete-btn" data-cid="">Delete</button>
+                                    <a href="{{ route('delete-asset', ['asset' => $asset]) }}">
+                                        <button class="btn-danger delete-btn">Delete</button>
+                                    </a>
                                 </td>
                             </tr>
                             @endforeach
                         @else
                             <tr>
-                                <td colspan="6" class="text-center">
-                                    <h4 class="label-info">No assets have been added uptill now</h4>
+                                <td colspan="13" class="text-center">
+                                    <h4 class="label-info">No assets have been added uptill now !</h4>
                                 </td>
                             </tr>
                         @endif
