@@ -22,7 +22,7 @@ class UpdateAssetTable extends Migration
                 ->references('id')->on('categories')
                 ->onDelete('cascade');
             $table->string('name', 35);
-            $table->dateTime('months_used_in_purchased_disposed_year');
+            $table->unsignedInteger('months_used_in_purchased_disposed_year');
             $table->unsignedInteger('no_of_assets_purchased');
             $table->string('description', 55);
             $table->double('purchase_cost');

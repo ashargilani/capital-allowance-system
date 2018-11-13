@@ -29,7 +29,12 @@ class AssetController extends Controller
      */
     public function create()
     {
-        $allCategories = Category::select('id', 'title', 'dep_input_percentage', 'ca_initial_allowance_percentage', 'ca_annual_allowance_percentage', 'ca_investment_allowance_percentage')->get();
+        $allCategories = Category::select(
+            'id', 'title', 'dep_input_percentage',
+            'ca_initial_allowance_percentage', 'ca_annual_allowance_percentage',
+            'ca_investment_allowance_percentage'
+        )
+            ->get();
 
         return view('admin.asset.add_asset')->with([
             'categories' => $allCategories
@@ -44,12 +49,18 @@ class AssetController extends Controller
      */
     public function store(Request $request, AssetService $assetService)
     {
-        if (Asset::create([
-            'name' => $request->input('name'),
-            'description' => $request->input('description')
-        ])) {
-            return redirect('list-assets');
+        $message = 'Failed to add the asset to the assets table';
+        $alertType = 'danger';
+
+        if($assetService->saveNewAsset($request)) {
+            $message = 'Successfully added the new asset to assets table';
+            $alertType = 'success';
         }
+
+        return redirect()->route('list-assets')->with([
+            'message' => $message,
+            'alert_type' => $alertType
+        ]);
     }
 
     /**
@@ -92,8 +103,11 @@ class AssetController extends Controller
      * @param  \App\Asset  $asset
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Asset $asset)
+    public function destroy(Asset $asset, AssetService $assetService)
     {
-        //
+        $message = $assetService->deleteAsset($asset);
+        return redirect()->route('list-assets')->with([
+            'message' => $message
+        ]);
     }
 }

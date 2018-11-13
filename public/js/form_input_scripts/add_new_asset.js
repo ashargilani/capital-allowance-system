@@ -1,8 +1,10 @@
 $(document).ready(function () {
     var asset = {
+        error: '',
         init: function () {
             $(document).on('change', '#purchase-cost', function () {
                 var purchaseCost = $(this).val();
+                asset.error = false;
                 if(purchaseCost) {
                     asset.setAnnualDeprecationValue(purchaseCost);
                     asset.setInitialAllowanceValue(purchaseCost);
@@ -13,15 +15,19 @@ $(document).ready(function () {
             });
         },
         getAssetGroup: function () {
-            var assetGroup = $('#asset-group');
-            if(assetGroup.attr('selectedIndex') == 0) {
-                alert('Please select asset group first');
-                assetGroup.focus();
+            if(!asset.error) {
+                var assetGroup = $('#asset-group');
+                if(assetGroup.find(':selected').val() == 0) {
+                    $('#purchase-cost').val('');
+                    alert('Please select asset group first');
+                    assetGroup.focus();
+                    asset.error = true;
 
-                return;
+                    return;
+                }
+
+                return assetGroup;
             }
-
-            return assetGroup;
         },
         setAnnualDeprecationValue: function (purchaseCostValue) {
             var deprecationRate = asset.getDeprecationRate();

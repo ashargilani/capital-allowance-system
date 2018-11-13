@@ -20,7 +20,7 @@
                         <label class="col-sm-2 col-form-label" for="asset-group">Asset Group:</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="category" id="asset-group" required>
-                                <option selected>Select Asset Group:</option>
+                                <option value="0" selected disabled>Select Asset Group:</option>
                                 @foreach($categories as $category)
                                     <option value="{{ $category->id }}" data-dep_input_percentage="{{ $category->dep_input_percentage }}" data-ca_initial_allowance_percentage="{{ $category->ca_initial_allowance_percentage }}" data-ca_annual_allowance_percentage="{{ $category->ca_annual_allowance_percentage }}" data-ca_investment_allowance_percentage="{{ $category->ca_investment_allowance_percentage }}">
                                         {{ $category->title }}
@@ -80,7 +80,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="annual-depreceation">Annual Depreceation:</label>
                             <div class="col-sm-10">
-                                <input type='number' id="annual-depreceation" name="annual_depreceation" class="form-control" placeholder="100" disabled />
+                                <input type='number' id="annual-depreceation" name="annual_depreceation" class="form-control" placeholder="100" readonly />
                             </div>
                         </div>
                     </fieldset>
@@ -89,19 +89,19 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="initial-allowance">Initial Allowance:</label>
                             <div class="col-sm-10">
-                                <input type='number' id="initial-allowance" name="initial_allowance" class="form-control" placeholder="100" disabled />
+                                <input type='number' id="initial-allowance" name="initial_allowance" class="form-control" placeholder="100" readonly />
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="annual-allowance">Annual Allowance:</label>
                             <div class="col-sm-10">
-                                <input type='number' id="annual-allowance" name="annual_allowance" class="form-control" placeholder="100" disabled />
+                                <input type='number' id="annual-allowance" name="annual_allowance" class="form-control" placeholder="100" readonly />
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="investment-allowance">Investment Allowance:</label>
                             <div class="col-sm-10">
-                                <input type='number' id="investment-allowance" name="investment_allowance" class="form-control" placeholder="100" disabled />
+                                <input type='number' id="investment-allowance" name="investment_allowance" class="form-control" placeholder="100" readonly />
                             </div>
                         </div>
                     </fieldset>

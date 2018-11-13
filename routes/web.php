@@ -23,6 +23,7 @@ Route::prefix('asset')->group(function() {
     Route::get('show', 'AssetController@index')->name('list-assets');
     Route::get('add', 'AssetController@create')->name('add-asset');
     Route::post('save', 'AssetController@store')->name('save-asset');
+    Route::get('delete/{asset}', 'AssetController@destroy')->name('delete-asset');
 });
 
 Route::prefix('asset-group')->group(function () {
