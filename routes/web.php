@@ -35,3 +35,8 @@ Route::prefix('asset-group')->group(function () {
     Route::get('delete/{category}', 'CategoryController@destroy')->name('delete-asset-group');
 });
 
+Route::prefix('reports')->group(function () {
+    Route::get('depreciation-report-index', 'ReportController@depreciationReportIndex')->name('show-dep-report-index');
+    Route::post('depreciation-report', 'ReportController@getDepreciationReport')->name('get-dep-report');
+});
+
