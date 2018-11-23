@@ -15,7 +15,7 @@
             <a href="{{ route('list-assets') }}"><i class="fa fa-object-ungroup sidebar-style"></i> &nbsp; Assets </a>
         </li>
         <li>
-            <a href="#"><i class="fa fa-money sidebar-style"></i> &nbsp; Depreciation report </a>
+            <a href="{{ route('show-dep-report-index') }}"><i class="fa fa-money sidebar-style"></i> &nbsp; Depreciation report </a>
         </li>
         <li>
             <a href="#"><i class="fa fa-sitemap sidebar-style"></i>  &nbsp; Allowance report </a>

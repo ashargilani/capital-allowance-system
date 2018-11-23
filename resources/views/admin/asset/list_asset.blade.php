@@ -82,5 +82,6 @@
     </div>
 @endsection
 @section('additional-scripts')
+    <script src="{{ asset('js/datatables.min.js') }}" type="text/javascript"></script>
     @include('admin.layout.partials.datatables')
 @endsection

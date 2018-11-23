@@ -13,4 +13,12 @@ class Category extends Model
         'ca_annual_allowance_percentage' => 'float',
         'ca_investment_allowance_percentage' => 'float'
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function asset()
+    {
+        return $this->hasMany('App\Asset');
+    }
 }
